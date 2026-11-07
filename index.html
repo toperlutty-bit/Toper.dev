@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Создание сайтов — прайс</title>
+<title>Toper.dev — создание сайтов</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=JetBrains+Mono:wght@700&display=swap">
 <meta name="description" content="Делаю сайты для бизнеса: лендинги, сайты-визитки, сайты под ключ. Прайс и условия работы.">
 <style>
   :root{
@@ -19,8 +22,10 @@
   /* Шапка */
   header{position:sticky;top:0;z-index:10;background:rgba(11,13,18,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .logo{font-weight:800;font-size:1.15rem;letter-spacing:.3px}
-  .logo span{color:var(--accent)}
+  .logo{display:flex;align-items:center;gap:3px;line-height:1}
+  .logo .br{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.3rem;color:#8b6dff}
+  .logo .word{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.65rem;letter-spacing:-.5px;color:transparent;-webkit-text-stroke:1.3px #8b6dff}
+  .logo .dev{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.85rem;letter-spacing:3px;color:var(--text);margin-left:8px}
   nav a{color:var(--muted);margin-left:22px;font-size:.95rem}
   nav a:hover{color:var(--text)}
   @media(max-width:640px){nav{display:none}}
@@ -97,7 +102,7 @@
 
 <header>
   <div class="wrap">
-    <a href="#" class="logo" data-name>Toper<span>.dev</span></a>
+    <a href="#" class="logo" aria-label="Toper.dev — на главную"><span class="br">&lt;</span><span class="word">TOPER</span><span class="br">/&gt;</span><span class="dev">.DEV</span></a>
     <nav>
       <a href="#prices">Цены</a>
       <a href="#extras">Доп. услуги</a>
@@ -267,7 +272,6 @@
   };
   /* ======================================= */
 
-  document.querySelector("[data-name]").innerHTML = CONFIG.name + "<span>.dev</span>";
   document.querySelector("[data-name-plain]").textContent = CONFIG.name;
   document.querySelector("[data-telegram]").href = "https://t.me/" + CONFIG.telegram;
   document.querySelector("[data-phone]").href = "tel:" + CONFIG.phone;

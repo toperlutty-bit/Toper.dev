@@ -43,7 +43,10 @@
   .sub{color:var(--muted);text-align:center;margin-bottom:44px}
 
   /* Тарифы */
-  .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .plan.fast{border-color:var(--accent2);box-shadow:0 0 0 1px var(--accent2),0 20px 50px rgba(34,211,166,.15)}
+  .plan.fast .tag{background:var(--accent2);color:#0b0d12}
+  .plan.fast .btn{background:var(--accent2);color:#0b0d12;border:0}
   .plan{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;flex-direction:column;position:relative}
   .plan.hit{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 20px 50px rgba(124,92,255,.18)}
   .plan .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:.8rem;font-weight:700;padding:4px 14px;border-radius:99px;white-space:nowrap}
@@ -150,6 +153,23 @@
           <li>3 круга правок</li>
         </ul>
         <a href="#contact" class="btn btn-main">Заказать</a>
+      </div>
+
+      <div class="plan fast">
+        <div class="tag">⚡ За 24 часа</div>
+        <h3>Быстро и Качественно!</h3>
+        <p class="for">Всё быстро: вы почти моментально получаете аккуратный, полностью готовый проект</p>
+        <div class="price">35 000 ₽</div>
+        <div class="term">Срок: в течение 24 часов</div>
+        <ul>
+          <li>Готовый сайт в течение 24 часов</li>
+          <li>Аккуратный современный дизайн</li>
+          <li>Всё настроено и готово к работе</li>
+          <li>Не нужно покупать домен и хостинг — сайт размещается на бесплатном адресе</li>
+          <li>Адаптация под телефоны</li>
+          <li>Полные права на сайт и исходный код</li>
+        </ul>
+        <a href="#contact" class="btn">Заказать</a>
       </div>
 
       <div class="plan">
